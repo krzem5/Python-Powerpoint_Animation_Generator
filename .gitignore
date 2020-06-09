@@ -1,0 +1,8 @@
+### Github File Push Ignore
+
+
+build
+
+*.exe
+*.zip
+*.pptx
