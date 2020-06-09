@@ -7,7 +7,7 @@ PowerPoint Animation Generator is a simple python program made to easily generat
 
 Compiling is optional. It uses pyinstaller to create an exe.
 ```bash
-pyinstaller --noconfirm --onefile --nowindowed --name "app" --ascii --clean --log-level "DEBUG" "app.py"
+pyinstaller --noconfirm --onefile --nowindowed --name "index" --ascii --clean --log-level "DEBUG" "index.py"
 ```
 The file `build.bat` simplifies that process and automaticly removes all unwanted pyinstaller files.
 
@@ -15,11 +15,12 @@ The file `build.bat` simplifies that process and automaticly removes all unwante
 ## Usage
 
 ```bash
-python app.py <path to json file>
+python index.py <path to json file>
 ```
 _OR_&nbsp;&nbsp;(build version)
+
 ```bash
-app.exe <path to json file>
+index.exe <path to json file>
 ```
 
 ### Json File Structure
@@ -30,7 +31,7 @@ Key|Type|Required|Description
 :-:|:-:|:-:|-
 `name`|`string`|:heavy_check_mark:|The name of the PowerPoint file that will be generated
 `objects`|`dict`|:heavy_check_mark:|Dict of key-pair values The keys are the object id's and the values are object definitions used in the animation (structure defined [here](#object-definition-structure))
-`animations`|`list`|:heavy_check_mark:|List of animation _'commands'_ (structure defined [here](#))
+`animations`|`list`|:heavy_check_mark:|List of animation _'commands'_ (structure defined [here](#animation-command-structure))
 
 #### Object Definition Structure
 
@@ -56,3 +57,31 @@ Key|Type|Required|Description
 `acc`|`procentage`|:x:|The acceleration (_'ease-in'_) procentage (up to 3 decimal places)
 `dec`|`procentage`|:x:|The deceleration (_'ease-out'_) procentage (up to 3 decimal places)
 `data`|`dict` / `list`|:heavy_check_mark:|The data of the animation (structure changes based on the type)
+
+#### **The `data` value for the structure above has the following structure if the `type` is set to `motion`:**
+
+**General Type:** `list`
+Key|Type|Required|Description
+:-:|:-:|:-:|-
+`x`|`coord`|:heavy_check_mark:|The x-position of the given point
+`y`|`coord`|:heavy_check_mark:|The y-position of the given point
+`ax`|`coord`|:heavy_check_mark:|The x-position of the 1st control point of the curve
+`ay`|`coord`|:heavy_check_mark:|The y-position of the 1st control point of the curve
+`bx`|`coord`|:heavy_check_mark:|The x-position of the 2nd control point of the curve
+`by`|`coord`|:heavy_check_mark:|The y-position of the 2nd control point of the curve
+
+***Note:** A curve will only be generated if all of the control points are specified, otherwise all of them will be ignored*
+
+***Note 2:** The 1st point in the list is the starting point and will always ignore the `ax`, `ay`, `bx` and `by` parameters*
+
+#### **The `data` value for the animation structure has the following structure if the `type` is set to `rotation`:**
+
+**General Type:** `dict`
+Key|Type|Required|Description
+:-:|:-:|:-:|-
+`by`|`float`|:x:|The relative rotation of the given object (60 000 units per angle)
+`from`|`float`|:x:|The start rotation of the object (60 000 units per angle)
+`to`|`float`|:x:|The end rotation of the object (60 000 units per angle)
+
+***Note:** If the `by` key is specified, it will always use it. Otherwise, it will use `from` and `to`*
+
