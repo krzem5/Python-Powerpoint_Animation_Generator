@@ -65,10 +65,10 @@ Key|Type|Required|Description
 :-:|:-:|:-:|-
 `x`|`coord`|:heavy_check_mark:|The x-position of the given point
 `y`|`coord`|:heavy_check_mark:|The y-position of the given point
-`ax`|`coord`|:heavy_check_mark:|The x-position of the 1st control point of the curve
-`ay`|`coord`|:heavy_check_mark:|The y-position of the 1st control point of the curve
-`bx`|`coord`|:heavy_check_mark:|The x-position of the 2nd control point of the curve
-`by`|`coord`|:heavy_check_mark:|The y-position of the 2nd control point of the curve
+`ax`|`coord`|:x:|The x-position of the 1st control point of the curve
+`ay`|`coord`|:x:|The y-position of the 1st control point of the curve
+`bx`|`coord`|:x:|The x-position of the 2nd control point of the curve
+`by`|`coord`|:x:|The y-position of the 2nd control point of the curve
 
 ***Note:** A curve will only be generated if all of the control points are specified, otherwise all of them will be ignored*
 
@@ -82,6 +82,23 @@ Key|Type|Required|Description
 `by`|`float`|:x:|The relative rotation of the given object (60 000 units per angle)
 `from`|`float`|:x:|The start rotation of the object (60 000 units per angle)
 `to`|`float`|:x:|The end rotation of the object (60 000 units per angle)
+
+***Note:** If the `by` key is specified, it will always use it. Otherwise, it will use `from` and `to`*
+
+#### **The `data` value for the animation structure has the following structure if the `type` is set to `scale`:**
+
+**General Type:** `dict`
+Key|Type|Required|Description
+:-:|:-:|:-:|-
+`by`|`dict`|:x:|The relative scale of the given object
+`by:x`|`float`|:heavy_check_mark:|The relative x-scale value
+`by:y`|`float`|:heavy_check_mark:|The relative y-scale value
+`from`|`dict`|:x:|The start scale of the object
+`from:x`|`float`|:heavy_check_mark:|The start x-scale value
+`from:y`|`float`|:heavy_check_mark:|The start y-scale value
+`to`|`dict`|:x:|The end scale of the object
+`nd:x`|`float`|:heavy_check_mark:|The end x-scale value
+`end:y`|`float`|:heavy_check_mark:|The end y-scale value
 
 ***Note:** If the `by` key is specified, it will always use it. Otherwise, it will use `from` and `to`*
 
