@@ -1,6 +1,6 @@
 # PowerPoint Animation Generator
 
-PowerPoint Animation Generator is a simple python program made to easily generate PowerPoint Animations. It uses json file as an input.
+PowerPoint Animation Generator is a simple python program made to easily generate PowerPoint Animations. It uses a json file as an input.
 
 
 ## Compiling
