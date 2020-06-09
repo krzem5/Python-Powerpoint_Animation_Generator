@@ -27,6 +27,8 @@ index.exe <path to json file>
 
 The json file must have the structrue presented below or else the program will fail with an error.
 
+***Note:** The `coord` type can be an intiger or a valid equasion. It can contain procentages (ex. `20%+80`) which will be replaced by the procent of the width / height (for x-position / width if will be the width of the slide and for y-position / height the height of the slide)*
+
 Key|Type|Required|Description
 :-:|:-:|:-:|-
 `name`|`string`|:heavy_check_mark:|The name of the PowerPoint file that will be generated
