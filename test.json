@@ -1,79 +1,7 @@
 {
-	"name": "test2",
-	"objects": {
-		"forest":{
-			"src": "img/spruce_forest.png",
-			"pos": {
-				"x": "15%-20",
-				"y": 92
-			},
-			"size": {
-				"w": 330,
-				"h": 330
-			}
-		},
-		"forest2":{
-			"src": "img/spruce_forest.png",
-			"pos": {
-				"x": "50%+75",
-				"y": 105
-			},
-			"size": {
-				"w": 276,
-				"h": 276
-			}
-		},
-		"man":{
-			"src": "img/man.png",
-			"pos": {
-				"x": -40,
-				"y": "50%+34"
-			},
-			"size": {
-				"w": 220,
-				"h": 220
-			}
-		},
-		"man_w":{
-			"src": "img/man_walking.png",
-			"pos": {
-				"x": "-100%",
-				"y": "-100%"
-			},
-			"size": {
-				"w": 220,
-				"h": 220
-			}
-		},
-		"tree":{
-			"src": "img/spruce.png",
-			"pos": {
-				"x": "100%-500",
-				"y": "100%-490"
-			},
-			"size": {
-				"w": 520,
-				"h": 520
-			}
-		},
-		"tree2":{
-			"src": "img/oak.png",
-			"pos": {
-				"x": "100%",
-				"y": "100%-490"
-			},
-			"size": {
-				"w": 540,
-				"h": 540
-			}
-		}
-	},
 	"animation": [
 		{
-			"id": "man",
-			"duration": 1,
-			"offset": 400,
-			"data":[
+			"data": [
 				{
 					"x": "-100%",
 					"y": "-100%"
@@ -82,14 +10,13 @@
 					"x": "-100%",
 					"y": "-100%"
 				}
-			]
+			],
+			"duration": 1,
+			"id": "man",
+			"offset": 400
 		},
 		{
-			"id": "man_w",
-			"duration": 1800,
-			"offset": 400,
-			"dec": 100,
-			"data":[
+			"data": [
 				{
 					"x": -40,
 					"y": "50%+34"
@@ -98,14 +25,15 @@
 					"x": "50%-70",
 					"y": "50%+34"
 				}
-			]
+			],
+			"dec": 100,
+			"duration": 1800,
+			"id": "man_w",
+			"offset": 400
 		},
 		{
-			"id": "forest",
-			"duration": 6800,
-			"offset": 400,
 			"acc": 26.471,
-			"data":[
+			"data": [
 				{
 					"x": "15%-20",
 					"y": 92
@@ -114,14 +42,14 @@
 					"x": "15%-20-850",
 					"y": 92
 				}
-			]
+			],
+			"duration": 6800,
+			"id": "forest",
+			"offset": 400
 		},
 		{
-			"id": "forest2",
-			"duration": 6800,
-			"offset": 400,
 			"acc": 26.471,
-			"data":[
+			"data": [
 				{
 					"x": "50%+75",
 					"y": 105
@@ -130,14 +58,14 @@
 					"x": "50%+75-850",
 					"y": 105
 				}
-			]
+			],
+			"duration": 6800,
+			"id": "forest2",
+			"offset": 400
 		},
 		{
-			"id": "tree",
-			"duration": 5200,
-			"offset": 400,
 			"acc": 34.615,
-			"data":[
+			"data": [
 				{
 					"x": "100%-500",
 					"y": "100%-490"
@@ -146,13 +74,13 @@
 					"x": "100%-500-1300",
 					"y": "100%-490"
 				}
-			]
+			],
+			"duration": 5200,
+			"id": "tree",
+			"offset": 400
 		},
 		{
-			"id": "tree2",
-			"duration": 5200,
-			"offset": 2300,
-			"data":[
+			"data": [
 				{
 					"x": "100%",
 					"y": "100%-490"
@@ -161,7 +89,79 @@
 					"x": "100%-300-1300",
 					"y": "100%-490"
 				}
-			]
+			],
+			"duration": 5200,
+			"id": "tree2",
+			"offset": 2300
 		}
-	]
+	],
+	"name": "test2",
+	"objects": {
+		"forest": {
+			"pos": {
+				"x": "15%-20",
+				"y": 92
+			},
+			"size": {
+				"h": 330,
+				"w": 330
+			},
+			"src": "img/spruce_forest.png"
+		},
+		"forest2": {
+			"pos": {
+				"x": "50%+75",
+				"y": 105
+			},
+			"size": {
+				"h": 276,
+				"w": 276
+			},
+			"src": "img/spruce_forest.png"
+		},
+		"man": {
+			"pos": {
+				"x": -40,
+				"y": "50%+34"
+			},
+			"size": {
+				"h": 220,
+				"w": 220
+			},
+			"src": "img/man.png"
+		},
+		"man_w": {
+			"pos": {
+				"x": "-100%",
+				"y": "-100%"
+			},
+			"size": {
+				"h": 220,
+				"w": 220
+			},
+			"src": "img/man_walking.png"
+		},
+		"tree": {
+			"pos": {
+				"x": "100%-500",
+				"y": "100%-490"
+			},
+			"size": {
+				"h": 520,
+				"w": 520
+			},
+			"src": "img/spruce.png"
+		},
+		"tree2": {
+			"pos": {
+				"x": "100%",
+				"y": "100%-490"
+			},
+			"size": {
+				"h": 540,
+				"w": 540
+			},
+			"src": "img/oak.png"
+		}
+	}
 }
