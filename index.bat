@@ -1,3 +1,3 @@
 @echo off
 cls
-python index.py test.json
+python src/index.py test.json
