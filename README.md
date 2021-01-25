@@ -20,7 +20,7 @@ python index.py <path to json file>
 _OR_&nbsp;&nbsp;(build version)
 
 ```bash
-index.exe <path to json file>
+build/index.exe <path to json file>
 ```
 
 ### Json File Structure
@@ -103,4 +103,3 @@ Key|Type|Required|Description
 `end:y`|`float`|:heavy_check_mark:|The end y-scale value
 
 ***Note:** If the `by` key is specified, it will always use it. Otherwise, it will use `from` and `to`*
-
