@@ -1,7 +1,7 @@
 import zipfile
 import sys
 import json
-import ntpath
+import os
 import re
 import time
 
@@ -32,7 +32,7 @@ with open(sys.argv[1],"r") as cfg_f:
 		if ("src" not in list(v.keys())):
 			print(f"ERROR: Object '{k}' Doesn't Have a Path Specified")
 			sys.exit(0)
-		if (not ntpath.exists(v["src"])):
+		if (not os.path.exists(v["src"])):
 			print(f"ERROR: File '{v['src']}' Doesn't Exist")
 			sys.exit(0)
 		for e in v.keys():
