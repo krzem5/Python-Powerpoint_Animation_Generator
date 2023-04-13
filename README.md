@@ -2,7 +2,6 @@
 
 PowerPoint Animation Generator is a simple python program made to easily generate PowerPoint Animations. It uses a json file as an input.
 
-
 ## Compiling
 
 Compiling is optional. It uses pyinstaller to create an exe.
@@ -10,7 +9,6 @@ Compiling is optional. It uses pyinstaller to create an exe.
 pyinstaller --noconfirm --onefile --nowindowed --name "index" --ascii --clean --log-level "DEBUG" "index.py"
 ```
 The file `build.bat` simplifies that process and automaticly removes all unwanted pyinstaller files.
-
 
 ## Usage
 
