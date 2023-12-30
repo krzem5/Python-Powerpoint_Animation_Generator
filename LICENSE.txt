@@ -1,6 +1,6 @@
 BSD 3-Clause License
 
-Copyright (c) 2020-2023, Krzesimir Hyżyk
+Copyright (c) 2020-2024, Krzesimir Hyżyk
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
